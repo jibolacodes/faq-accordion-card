@@ -1,7 +1,7 @@
 const faqs = [
 	{
 		question: 'How many team members can I invite?',
-		answer: 'Lorem ipsum dolor sit amet consectetur.'
+		answer: ''
 	},
 	{
 		question: 'What is the maximum file upload size?',
@@ -9,15 +9,15 @@ const faqs = [
 	},
 	{
 		question: 'How do I reset my password?',
-		answer: 'Lorem ipsum dolor sit amet consectetur.'
+		answer: ''
 	},
 	{
 		question: 'Can I cancel my subscription?',
-		answer: 'Lorem ipsum dolor sit amet consectetur.'
+		answer: ''
 	},
 	{
 		question: 'Do you provide additional support?',
-		answer: 'Lorem ipsum dolor sit amet consectetur.'
+		answer: ''
 	}
 ]
 
@@ -35,7 +35,8 @@ window.addEventListener('DOMContentLoaded', function(){
 				</div>
 				<p class="answer">${faq.answer}</p>
 				<div class="underline"></div>
-	</div>`)
+			</div>`
+	)
 	});
 	article.innerHTML = content.join('');
 
@@ -51,6 +52,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			answer.classList.toggle('show');
 			arrow.classList.toggle('rotate');
 			faq.classList.toggle('bold-text');
+			faq.style.color = 'black';
 		})
 	})
 })

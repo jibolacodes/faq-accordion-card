@@ -36,35 +36,39 @@ body {
 	background-image: linear-gradient(var(--grad-violet),var(--grad-blue));
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 main {
-	margin: 134px 0;
+	margin: 7.4rem 0;
+	padding: 0 1.6rem;
 	height: fit-content;
-	width: 320px;
+	width: 315px;
 	background: #fff;
 	border-radius: 15px;
-	padding-bottom: 2rem;
 }
 .image-container {
 	display: flex;
 	justify-content: center;
 }
 .image-center {
-	width: 256px;
+	width: 224px;
 	height: 194px;
 	position: absolute;
-	top: 20px;
+	top: 18px;
 }
 .image-center img {
-	width: 16rem;
+	width: 14rem;
 	margin: auto;
 }
 .image-center img:nth-child(2){
 	position: relative;
-	bottom: 5rem;
+	bottom: 4rem;
+}
+.desktop {
+	display: none;
 }
 section {
-	margin: 8.4rem 1rem 2rem 1rem;
+	margin-top: 7rem;
 }
 h1 {
 	text-align: center;
@@ -72,8 +76,7 @@ h1 {
 	margin-bottom: 2rem;
 }
 #article {
-/*	margin: 1rem 0 2rem 0;*/
-	
+	margin: 1rem 0 2rem 0;
 }
 .faq {
 	margin-bottom: 1rem;
@@ -83,12 +86,12 @@ h1 {
 	justify-content: space-between;
 }
 .question {
-	font-size: 0.875rem;
+	font-size: var(--fs);
 	font-weight: var(--fw-a);
 	color: var(--clr-n-blue-a);
 	cursor: pointer;
 }
-.question-click {
+.question:hover {
 	color: var(--clr-p-red);
 }
 .bold-text {
@@ -122,23 +125,50 @@ h1 {
 	border: solid 1px var(--div-blue);
 	margin-top: 1rem;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
+	body {
+		align-items: center;
+	}
 	main {
 		display: grid;
 		grid-template-columns: auto  auto;
-		width: auto;
-		padding: 3rem;
+		width: 768px;
+		height: fit-content;
+		padding: 1.6rem 6rem 1.5rem 0;
 	}
 	.image-center {
 		position: relative;
-		/*right: 90px;*/
-	}
-	.image-center img {
-		object-fit: cover;
-		object-position: -100% 0;
 	}
 	section {
-		margin: 0;
-		margin-left: 3rem;
+		margin: 0 0 0 8rem;
+	}
+	h1 {
+		text-align: left;
+	}
+	#article {
+		width: 280px;
+	}
+	.desktop {
+		display: block;
+		position: relative;
+		top: 130px;
+	}
+	.desktop img:nth-child(1) {
+		width: 360px;
+		object-fit: fill;
+		object-position: -20% 0;
+		position: relative;
+		left: -70px;
+		top: -100px;
+		z-index: 1;
+	}
+	.desktop img:nth-child(2) {
+		width: 700px;
+		position: relative;
+		left: -410px;
+		bottom: 600px;
+	}
+	.mobile {
+		display: none;
 	}
 }
