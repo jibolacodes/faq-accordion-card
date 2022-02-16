@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+	--width-mobile: 375px;
+	--width-desktop: 1440px;
+
+	/*---TEXTS---*/
+	--clr-p-blue: hsl(238, 29%, 16%);
+	--clr-p-red: hsl(14, 88%, 65%);
+	--clr-n-blue-a: hsl(237, 12%, 33%);
+	--clr-n-blue-b: hsl(240, 6%, 50%);
+
+	/*---GRADIENTS---*/
+	--grad-violet: hsl(273, 75%, 66%);
+	--grad-blue: hsl(240, 73%, 65%);
+
+	/*---DIVIDERS---*/
+	--div-blue: hsl(240, 5%, 91%);
+
+	--fs: 12px;
+	--ff: 'Kumbh Sans', sans-serif;
+	--fw-a: 400;
+	--fw-b: 700;
+}
+
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: var(--fs);
+	font-family: var(--ff);
+	background-image: linear-gradient(var(--grad-violet),var(--grad-blue));
+	display: flex;
+	justify-content: center;
+}
+main {
+	margin: 134px 0;
+	height: fit-content;
+	width: 320px;
+	background: #fff;
+	border-radius: 15px;
+	padding-bottom: 2rem;
+}
+.image-container {
+	display: flex;
+	justify-content: center;
+}
+.image-center {
+	width: 256px;
+	height: 194px;
+	position: absolute;
+	top: 20px;
+}
+.image-center img {
+	width: 16rem;
+	margin: auto;
+}
+.image-center img:nth-child(2){
+	position: relative;
+	bottom: 5rem;
+}
+section {
+	margin: 8.4rem 1rem 2rem 1rem;
+}
+h1 {
+	text-align: center;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+}
+#article {
+/*	margin: 1rem 0 2rem 0;*/
+	
+}
+.faq {
+	margin-bottom: 1rem;
+}
+.question-center {
+	display: flex;
+	justify-content: space-between;
+}
+.question {
+	font-size: 0.875rem;
+	font-weight: var(--fw-a);
+	color: var(--clr-n-blue-a);
+	cursor: pointer;
+}
+.question-click {
+	color: var(--clr-p-red);
+}
+.bold-text {
+	font-weight: var(--fw-b);
+}
+.btn {
+	background: none;
+	border: none;
+}
+.btn:hover {
+	cursor: pointer;
+}
+.arrow {
+	width: 10px;
+	height: 7px;
+}
+.rotate {
+	transform: rotate(180deg);
+}
+.answer {
+	margin: 1rem 0;
+	padding-right: 1rem;
+	line-height: 18px;
+	color: var(--clr-n-blue-b);
+	display: none;
+}
+.show {
+	display: block;
+}
+.underline {
+	border: solid 1px var(--div-blue);
+	margin-top: 1rem;
+}
+@media screen and (min-width: 1440px) {
+	main {
+		display: grid;
+		grid-template-columns: auto  auto;
+		width: auto;
+		padding: 3rem;
+	}
+	.image-center {
+		position: relative;
+		/*right: 90px;*/
+	}
+	.image-center img {
+		object-fit: cover;
+		object-position: -100% 0;
+	}
+	section {
+		margin: 0;
+		margin-left: 3rem;
+	}
+}
